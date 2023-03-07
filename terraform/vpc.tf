@@ -8,8 +8,8 @@ resource "aws_vpc_ipam" "ipam_pool" {
 
 resource "aws_vpc_ipam_pool" "ipam_pool" {
   address_family = "ipv4"
-  ipam_scope_id = aws_vpc_ipam.ipam_pool.private_default_scope_id
-  locale = data.aws_region.current.name
+  ipam_scope_id  = aws_vpc_ipam.ipam_pool.private_default_scope_id
+  locale         = data.aws_region.current.name
 }
 
 resource "aws_vpc_ipam_pool_cidr" "cidr_pool" {
